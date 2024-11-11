@@ -13,7 +13,7 @@ load_dotenv()
 # from models.examples import Examples, Keywords, Titles
 
 # # importing routes
-# from views.blogposts import bp as blogpost_routes
+from views.land import bp as land_data_routes
 
 # # instantiate the app
 app = Flask(__name__)
@@ -40,7 +40,7 @@ app.config.from_object(__name__)
 
 
 # # Register the routes blueprint
-# app.register_blueprint(blogpost_routes)
+app.register_blueprint(land_data_routes)
 
 # enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
